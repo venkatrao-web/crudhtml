@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: beige;">
+
+    <div>
+        <center>
+            <form method="post">
+                {% csrf_token %}
+                <h3 style="color: crimson;">Student Update Form</h3>
+               
+                <p><label>Student Name</label>
+                <input type="text" name="name" value="{{ student.name }}" required></p>
+
+                 <p><label>Student Address</label>
+                <input type="text" name="address" value="{{ student.address }}" required></p>
+
+                 <p><label>Student Mail</label>
+                <input type="text" name="mail" value="{{ student.mail }}" required></p>
+
+                 <p><label>Student Age</label>
+                <input type="text" name="age" value="{{ student.age }}" required></p>
+
+                <input type="submit" value="Update">
+                
+            </form>
+        </center>
+    </div>
+
+    
+</body>
+</html>
